@@ -21,7 +21,7 @@ class StreamList extends React.Component {
 					</Link>
 				</div>
 			);
-		} // TODO: FIX SECOND LINK BUTTON!!!
+		}
 	}
 	renderCreateButton() {
 		if (this.props.isSignedIn) {
@@ -41,7 +41,7 @@ class StreamList extends React.Component {
 					{this.renderAdminUser(stream)}
 					<i className="large middle aligned icon camera"></i>
 					<div className="content">
-						{stream.title}
+						<Link to={`/streams/${stream.id}`}>{stream.title}</Link>
 						<div className="description">{stream.description}</div>
 					</div>
 				</div>
